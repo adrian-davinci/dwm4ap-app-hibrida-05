@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts/sodosans/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- API - Iconos -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/assets/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- API - Iconos FIN -->
+    <link rel="manifest" href="manifest.json">
+    <title>Actividad 05 - Aplicaciones Hibridas</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="starbucks-script" class="header-custom sticky-top shadow-sm d-flex align-items-center justify-content-between px-3">
+        <nav class="barranav nav-izquierda d-none d-lg-flex">
+            <ul id="menu-desktop">
+                <li><a href="#cafes"><span>Explorá nuestro menú</span></a></li>
+                <li><a href="#historia"><span>Conocé más</span></a></li>
+                <li><a href=""><span>Favoritos</span></a></li>
+            </ul>
+        </nav>
+
+        <div id="logo-starbucks">
+            <a href="index.html" aria-label="Logo Starbucks"></a>
+        </div>
+
+        <!-- BOTON HAMBURGUESA - MOBILE -->
+        <button class="d-lg-none border-0 bg-transparent" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas"
+            aria-controls="menuOffcanvas" aria-label="Abrir menú">
+            <i class="bi bi-list fs-1" id="icono-menu"></i>
+        </button>
+
+        <!-- BOTONES NAV - DESKTOP -->
+        <div class="botones-nav d-none d-lg-flex align-items-center gap-2">
+            <span id="total-favoritos" class="fw-bold text-dark" style="display: none;">0 favoritos</span>
+            <a href="" id="favoritos-btn" style="position: relative;">
+                <i class="bi bi-heart"></i>
+                <span id="contador-favoritos" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
+            </a>
+            <a href="#footer-info"><i class="bi bi-info-circle"></i></a>
+        </div>
+
+        <!-- MENU NAV MOBILE - OFFCANVAS -->
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+            <div class="offcanvas-header d-flex justify-content-between align-items-center px-3">
+                <div id="logo-starbucks-offcanvas">
+                    <a href="index.html" aria-label="Logo Starbucks"></a>
+                </div>
+                <button type="button" class="border-0 bg-transparent" data-bs-dismiss="offcanvas" aria-label="Cerrar menú">
+                    <i class="bi bi-x-lg fs-2" id="icono-cerrar"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column gap-4 px-4">
+                <a href="index.html" class="nav-link menu-item">Inicio</a>
+                <a href="#cafes" class="nav-link menu-item">Explorá nuestro menú</a>
+                <a href="#historia" class="nav-link menu-item">Conocé más</a>
+                <a href="favoritos.html" class="nav-link menu-item">Favoritos</a>
+                <a href="#footer-info" class="nav-link menu-item">Sobre el alumno</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- BANNER STARBUCKS -->
+        <section class="banner-starbucks position-relative text-center text-white">
+            <img src="img/banner/starbucks_banner.jpg" class="img-fluid w-100" alt="Banner Starbucks">
+            <div class="banner-contenido position-absolute top-50 start-50 translate-middle">
+                <p class="subtitulo mb-2">ENCONTRÁ EL CAFÉ PARA VOS</p>
+                <h1 class="titulo-banner">Starbucks<sup>®</sup> at Home Argentina</h1>
+                <p class="descripcion-banner">Disfrutá de los cafés Starbucks<sup>®</sup> que te gustan, en nuestros lugares o en tu casa</p>
+                <a href="#cafes" class="btn btn-banner">Descubrí nuestros cafés</a>
+            </div>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section id="cafes" class="productos-container">
+            <div class="container-starbucks py-4 text-center">
+                <p class="subtitulo-categorias mb-2">Nuestra selección premium</p>
+                <h2 class="titulo-seccion">Menú Starbucks<sup>®</sup></h2>
+            </div>
+            
+            <div class="container">
+                <div id="productos-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer-info">
+        <div class="footer-logo">
+            <a href="index.html" aria-label="Logo Starbucks" id="logo-footer"></a>
+        </div>
+
+        <div class="footer-contenido">
+            <div class="footer-menu">
+                <a href="#historia">Sobre Nosotros</a>
+                <a href="">Favoritos</a>
+                <a href="#"><i class="bi bi-globe"></i></a>
+            </div>
+
+            <div class="footer-enlaces">
+                <a href="#">Cookies</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos de uso</a>
+                <a href="#">Starbucks.com.ar</a>
+            </div>
+
+
+            <small class="footer-legal">
+                    Starbucks® y el logo de la sirena son marcas registradas por Starbucks, utilizadas bajo licencia por Nestlé. Todos los derechos reservados.
+                    Pike Place es una marca comercial registrada de the Pike Place market pda, utilizada bajo licencia por Nestlé.
+                    Nespresso® y NESCAFÉ® Dolce Gusto® son marcas registradas de Société des Produits Nestlé S.A.
+                    El resto de las marcas son propiedad de sus dueños.
+            </small>
+            
+        </div>
+    </footer>
+
+</body>
+<script src="js/main.js"></script>
+</html>

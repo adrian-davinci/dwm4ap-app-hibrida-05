@@ -1,0 +1,1814 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 1.125rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: white;
+}
+
+/* LOGO */
+
+#logo-starbucks {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: url("/img/logo/logo_starbucks.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#logo-starbucks a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#logo-offcanvas {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-image: url("/img/logo/logo_starbucks.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left;
+}
+
+#logo-footer {
+  width: 100%;
+  height: 80px;
+  background-image: url("/img/logo/logo_footer.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: block;
+}
+
+/* BARRA DE NAVEGACION */
+
+.offcanvas-end {
+  width: 70% !important;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 1rem 8rem;
+  gap: 8rem;
+}
+
+.header-custom {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 6.5rem;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.barranav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2.5rem;
+}
+
+#menu-desktop {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.barranav a {
+  position: relative;
+  text-decoration: none;
+  color: #1e3932;
+  font-family: "SoDo Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.barranav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #1e3932;
+  transition: width 0.3s ease;
+}
+
+.barranav a:hover::after {
+  width: 100%;
+}
+
+/* BOTON CARRITO DE COMPRAS E INFORMACION */
+
+.botones-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.75rem;
+  padding-left: 25rem;
+}
+
+.botones-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e3932;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.botones-nav a:hover {
+  background-color: #005c37;
+  color: white;
+}
+
+#contador-carrito {
+  font-size: 0.7rem;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.alumnosFotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.alumno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 45%;
+  text-align: center;
+  max-width: 300px;
+}
+
+.alumnosFotos a {
+  text-decoration: none;
+}
+
+.alumno img {
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.nombre {
+  font-weight: bold;
+}
+
+.redes-sociales-info {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.redes-sociales-info a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.redes-sociales-info a:hover {
+  background-color: #00754a;
+  transform: translateY(-2px);
+}
+
+.redes-sociales-info a i {
+  color: #000;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.redes-sociales-info a:hover i {
+  color: #fff;
+}
+
+/* BANNER - STARKBUCKS */
+
+.banner-starbucks {
+  height: auto;
+  overflow: hidden;
+}
+
+.banner-contenido {
+  color: #1e3932;
+  padding: 1rem;
+}
+
+.top-50 {
+  top: 25% !important;
+}
+
+.subtitulo {
+  font-family: "PikeBold", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #006241;
+}
+
+.titulo-banner {
+  font-family: 'LanderGrande', sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #1e3932;
+}
+
+.descripcion-banner {
+  font-family: "SoDo Sans";
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #1e3932;
+}
+
+.btn-banner {
+  font-family: 'SoDo Sans';
+  background-color: #d4e9e2;
+  color: #1e3932;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-banner:hover {
+  background-color: #005c37;
+  color: white;
+}
+
+/* ANUNCIO */
+
+.seccion-cafe {
+  background-color: #f1f0eb;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.titulo-cafe {
+  font-family: "PikeBold", sans-serif;
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+  color: #006241;
+  font-size: 22px;
+}
+
+.descripcion-cafe {
+  font-family: "SoDo Sans", sans-serif;
+  color: #1e3932;
+  font-size: 18px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* BANNER STARBUCKS */
+
+#carrusel-starbucks {
+  position: relative;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+#carrusel-starbucks img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.carousel-caption {
+  max-width: 510px;
+  left: 5%;
+  bottom: 20%;
+  z-index: 2;
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 35%, transparent 70%);
+  z-index: 1;
+}
+
+.subtitulo-carrusel {
+  font-family: "PikeBold", sans-serif;
+  color: white;
+  letter-spacing: 0.3rem;
+  font-size: 14px;
+  margin-bottom: 0.8rem;
+}
+
+.titulo-carrusel {
+  font-family: "LanderGrande", serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 1.2rem;
+}
+
+.descripcion-carrusel {
+  font-family: "SoDo Sans", sans-serif;
+  color: white;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.boton-carrusel {
+  font-family: "SoDo Sans", sans-serif;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  padding: 10px 20px;
+  background-color: #006241;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton-carrusel:hover {
+  background-color: #004c34;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
+
+/* HISTORIA */
+
+.historia-starbucks {
+  background-color: #ffffff;
+}
+
+.historia-subtitulo {
+  font-family: "PikeBold", sans-serif;
+  letter-spacing: 0.3rem;
+  color: #006241;
+  font-size: 22px;
+  margin-bottom: 0.5rem;
+}
+
+.historia-titulo {
+  font-family: "LanderGrande", serif;
+  font-size: 62px;
+  color: #1e3932;
+  margin-bottom: 1.2rem;
+}
+
+.historia-descripcion {
+  font-family: "SoDo Sans", sans-serif;
+  color: #1e3932;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.boton-historia {
+  font-family: "SoDo Sans", sans-serif;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  padding: 10px 20px;
+  background-color: #006241;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton-historia:hover {
+  background-color: #004c34;
+}
+
+.tiempo-lectura {
+  font-family: "SoDo Sans", sans-serif;
+  font-size: 0.95rem;
+  color: #1e3932;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* SUSTENTABILIDAD */
+
+.historia-cafe {
+  background-color: #006241;
+}
+
+.historia-cafe .historia-subtitulo,
+.historia-cafe .historia-titulo,
+.historia-cafe .historia-descripcion {
+  color: #ffffff;
+}
+
+.historia-cafe .boton-historia {
+  background-color: #1c3a32;
+}
+
+.historia-cafe .boton-historia:hover {
+  background-color: #ffffff;
+}
+
+.cafe-practices {
+  background-color: #006241;
+}
+
+.cafe-subtitulo {
+  font-family: "PikeBold", sans-serif;
+  letter-spacing: 0.3rem;
+  color: #ffffff;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.cafe-titulo {
+  font-family: "LanderGrande", serif;
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+.cafe-descripcion {
+  font-family: "SoDo Sans", sans-serif;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.boton-cafe {
+  font-family: "SoDo Sans", sans-serif;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  padding: 10px 20px;
+  background-color: #1e3932;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.boton-cafe:hover {
+  background-color: #152c25;
+}
+
+.tiempo-lectura-2 {
+  font-family: "SoDo Sans", sans-serif;
+  font-size: 0.95rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* FORMULARIO */
+
+.formulario-contacto {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.formulario {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario h2 {
+  font-weight: bold;
+}
+
+.formulario-texto {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  font-size: 1rem;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.boton-formulario {
+  background-color: black;
+  color: white;
+  border: 2px solid transparent;
+  padding: 5px 15px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.boton-formulario:hover {
+  border: 2px solid #000000;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* CARRITO DE COMPRAS */
+
+.container-starbucks {
+  background-color: #edece7;
+}
+
+.productos-container {
+  background-color: #edece7;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.product-card-body {
+  padding: 1.5rem;
+  background-color: white;
+  color: #1f3c42;
+}
+
+.product-subcategoria {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #00754a;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.product-nombre {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e3932;
+  margin-bottom: 0.5rem;
+}
+
+.product-precio {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  color: #1e3932;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.product-btn {
+  font-family: "SoDo Sans", sans-serif;
+  background-color: #134a39;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.product-btn:hover {
+  background-color: #0e3b2d;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+#productos h2 {
+  font-weight: 600;
+  text-align: left;
+}
+
+.modal-footer {
+  display: block;
+}
+
+.modal-footer .btn {
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  background-color: #d4e9e2;
+  color: #1e3932;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.modal-footer .btn:hover {
+  background-color: #1e3932;
+  color: white;
+  border-color: #d4e9e2;
+}
+
+.carrito-body {
+  display: block !important;
+}
+
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+/* FILTROS DE CATEGORIA */
+.categoria-btn {
+  padding: 8px 10px;
+  background: none;
+  border: none;
+  font-family: "LanderGrande", serif;
+  font-size: 2rem;
+  color: gray;
+  padding-bottom: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoria-btn.active {
+  color: #006241;
+}
+
+.categoria-btn.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #006241;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.subtitulo-categorias {
+  font-family: "PikeBold", sans-serif;
+  color: #006241;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.modal-backdrop {
+  z-index: 999;
+}
+
+/* MINI CARRITO */
+#minicarrito {
+  top: 80px;
+  z-index: 100;
+}
+
+/* ITEMS DEL CARRITO MODAL */
+.carrito-item {
+  font-family: "LanderGrande", sans-serif;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carrito-item-contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.carrito-controles-precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controles-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-eliminar {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.btn-eliminar i {
+  font-size: 0.9rem;
+}
+
+.carrito-item-precio {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.carrito-item:last-child {
+  border-bottom: none;
+}
+
+.carrito-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carrito-item-info {
+  flex: 1;
+}
+
+.carrito-item-info h6 {
+  margin: 0 0 0.5rem 0;
+}
+
+h5 {
+  font-family: "LanderGrande", sans-serif;
+}
+
+.carrito-item-info p {
+  font-family: "SoDo Sans";
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.carrito-item-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cantidad-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cantidad-controls button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cantidad-controls button:hover {
+  background: #f8f9fa;
+}
+
+.cantidad-controls span {
+  min-width: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #1e3932;
+  color: white;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-family: "SoDo Sans";
+}
+
+.footer-contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -90px;
+  padding-bottom: 20px;
+}
+
+.footer-menu,
+.footer-enlaces,
+.footer-redes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-menu a {
+  font-size: 18px;
+  justify-content: space-between;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-enlaces a {
+  color: #8fa6a0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-menu a:hover,
+.footer-enlaces a:hover {
+  color: #ffffff;
+}
+
+.footer-redes a {
+  color: #8fa6a0;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.footer-redes a:hover {
+  color: #ffffff;
+}
+
+.footer-legal {
+  font-size: 10px;
+  max-width: 600px;
+  line-height: 1.4;
+  color: #8fa6a0;
+}
+
+#minicarrito .alert {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 0.75rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fs-5-sb {
+  font-size: 22px;
+  font-family: "LanderGrande", serif;
+  color: white;
+}
+
+.text-muted-sb {
+  color: white;
+}
+
+#minicarrito .btn-custom {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+#minicarrito .btn-custom:hover {
+  background-color: #222222;
+}
+
+.btn-primary {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.carrito-icono {
+  position: relative;
+  display: inline-block;
+}
+
+#contador-carrito {
+  position: absolute;
+  top: 0;
+  transform: translate(50%, -50%);
+  background-color: #dc3545;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  height: 24px;
+  min-width: 24px;
+  padding: 0 7px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 24px;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+#total-carrito {
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.botones-nav {
+  gap: 0.5rem;
+}
+
+/* MODAL */
+.modal-detalle-starbucks {
+  background: linear-gradient(135deg, #1e3932 0%, #00754a 100%);
+  border: none;
+}
+
+.modal-detalle-starbucks .modal-header,
+.modal-detalle-starbucks .modal-footer {
+  border: none;
+}
+
+.modal-detalle-starbucks .btn-close {
+  filter: invert(1);
+}
+
+.modal-detalle-starbucks .modal-dialog {
+  max-width: 90vw;
+  width: 1000px;
+}
+
+.titulo-detalle {
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.subcategoria-detalle {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  color: #d4e9e2;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.descripcion-detalle {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.precio-detalle {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d4e9e2;
+  margin-bottom: 1rem;
+}
+
+.info-adicional {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.info-adicional p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.info-adicional strong {
+  color: #d4e9e2;
+}
+
+/* BARRA DE BUSQUEDA */
+.barra-de-busqueda {
+  background-color: #f1f0eb;
+}
+
+.barra-busqueda .form-control {
+  border: 2px solid #1e3932;
+  border-radius: 25px 0 0 25px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  padding: 12px 20px;
+}
+
+.barra-busqueda .form-control:focus {
+  border-color: #00754a;
+  box-shadow: 0 0 0 0.2rem rgba(0, 117, 74, 0.25);
+}
+
+.barra-busqueda .btn {
+  border: 2px solid #1e3932;
+  border-left: none;
+  background-color: #1e3932;
+  color: white;
+  padding: 12px 20px;
+}
+
+.barra-busqueda .btn:hover {
+  background-color: #00754a;
+  border-color: #00754a;
+}
+
+.barra-busqueda .btn:last-child {
+  border-radius: 0 25px 25px 0;
+}
+
+.col-12.text-center.py-5 {
+    width: -webkit-fill-available;
+}
+
+/* FAVORITOS */
+.banner-favoritos {
+  background: linear-gradient(135deg, #00754a 0%, #1e3932 100%);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-favoritos .titulo-banner {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner-favoritos .descripcion-banner {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.favoritos-container {
+  background-color: #f1f0eb;
+  min-height: 60vh;
+}
+
+#no-favoritos {
+  background-color: white;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#no-favoritos .display-1 {
+  font-size: 4rem;
+  color: #00754a;
+}
+
+#limpiar-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CARGANDO Y ERROR */
+#cargando {
+  background-color: #f1f0eb;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#cargando .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+#error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  border-radius: 10px;
+  margin: 2rem;
+}
+
+#error h4 {
+  color: #721c24;
+  font-weight: 600;
+}
+
+/* ALERT SUCCESS */
+.alert-success {
+  background-color: #d4e9e2;
+  border-color: #00754a;
+  color: #1e3932;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* ALUMNO */
+.alumno-info .nombre {
+  font-family: 'LanderGrande', sans-serif;
+  font-weight: 200;
+  color: white;
+}
+
+.alumno-info p {
+  font-family: "SoDo Sans", sans-serif;
+  color: #d4e9e2;
+  margin-bottom: 0.25rem;
+}
+
+.alumno-info a {
+  color: #d4e9e2;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.alumno-info a:hover {
+  color: white;
+}
+
+.btn-success {
+  background-color: #00754a;
+  border-color: #00754a;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #005c37;
+  border-color: #005c37;
+  transform: translateY(-2px);
+}
+
+.btn-outline-success {
+  color: #00754a;
+  border-color: #00754a;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #00754a;
+  border-color: #00754a;
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+  transform: translateY(-2px);
+}
+
+.titulo-seccion{
+  font-family: 'LanderGrande', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #1e3932;
+}
+
+.offcanvas-body .menu-item {
+  font-family: "LanderGrande", serif;
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bold;
+  color: #1e3932;
+}
+
+.offline{
+  background-color: rgb(255, 73, 73);
+  a{
+    color: white;
+  }
+}
+
+#share,
+#addToHome {
+  position: fixed;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #00704a;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#share {
+  bottom: 100px;
+}
+
+#addToHome {
+  bottom: 30px;
+}
+
+#share:hover,
+#addToHome:hover {
+  background-color: #005a3c;
+  transform: scale(1.1);
+}
+
+#share:active,
+#addToHome:active {
+  transform: scale(0.95);
+}
+
+@font-face {
+  font-family: "LanderGrande";
+  src: url("fonts/lander/LanderGrande-Regular.otf");
+}
+
+@font-face {
+  font-family: "PikeBold";
+  src: url("fonts/pike/pike-bold.otf");
+}
+
+/* RESOLUCION MOBILE */
+@media (min-width: 320px) and (max-width: 576px) {
+  header {
+    padding: 1rem;
+  }
+
+  #logo-starbucks {
+    background-position: left;
+  }
+
+  .offcanvas.offcanvas-top {
+    top: 0 !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    width: 100% !important;
+    border-radius: 0;
+  }
+
+  #logo-footer {
+    width: 100% !important;
+  }
+
+  .footer-logo {
+    width: auto !important;
+    padding-bottom: 0 !important;
+  }
+
+  .header-custom {
+    padding: 0 1rem;
+    height: 5rem;
+  }
+
+  .barranav {
+    display: none;
+  }
+
+  .botones-nav {
+    padding-left: 0;
+    gap: 1rem;
+  }
+
+  .titulo-banner {
+    font-size: 2.5rem;
+  }
+
+  .historia-titulo {
+    font-size: 2.5rem;
+  }
+
+  .cafe-titulo {
+    font-size: 2rem;
+  }
+
+  .formulario-contacto {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .productos-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .product-nombre {
+    font-size: 1.5rem;
+  }
+
+  .titulo-detalle {
+    font-size: 2rem;
+  }
+
+  .subcategoria-detalle {
+    font-size: 1.2rem;
+  }
+
+  .alumnosFotos {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .alumno {
+    max-width: 100%;
+  }
+
+  .redes-sociales-info {
+    border: none;
+  }
+
+  .redes-sociales-info:hover {
+    background-color: transparent;
+  }
+
+  .top-50 {
+    top: auto !important;
+  }
+
+  .translate-middle {
+    transform: none !important;
+  }
+
+  .start-50 {
+    left: auto !important;
+  }
+
+  .banner-contenedor {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-contenido {
+    order: 1;
+    position: static !important;
+    transform: none !important;
+    background-color: #f1f0eb;
+    color: #000;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .banner-starbucks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-starbucks img {
+    order: 2;
+  }
+
+  #carrusel-starbucks .overlay {
+    display: none !important;
+  }
+
+  #historia {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  #historia .historia-subtitulo {
+    order: 1;
+  }
+
+  #historia .historia-titulo {
+    order: 2;
+  }
+
+  #historia .col-md-6 img {
+    order: 3;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .historia-subtitulo {
+    text-align: center;
+  }
+
+  .historia-titulo {
+    text-align: center;
+  }
+
+  .historia-descripcion {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  #historia .historia-descripcion,
+  #historia .d-flex {
+    order: 4;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .categoria-btn {
+    font-size: 1.1rem;
+    padding: 0 0;
+  }
+
+  .me-3 {
+    margin-right: auto !important;
+  }
+
+  .agregar-carrito {
+    margin-bottom: 10px;
+  }
+
+  .titulo-relacionados {
+    font-size: 2rem;
+  }
+
+  .p-5 {
+    padding: 1rem !important;
+  }
+
+  .formulario {
+    padding: 0;
+  }
+  
+  .d-flex.gap-3.flex-wrap {
+    justify-content: center;
+  }
+
+  input#search-input {
+    font-size: 14px;
+  }
+
+  .titulo-seccion {
+    font-size: 2rem;
+  }
+
+  button.btn.btn-outline-success {
+    padding: 10px;
+  }
+
+  .modal-footer .btn {
+    font-size: 14px;
+    border: 1px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .titulo-detalle {
+    font-size: 1.4rem;
+  }
+
+  .descripcion-detalle {
+    font-size: 0.9rem;
+  }
+
+  .precio-detalle {
+    font-size: 1.2rem !important;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  h3.mt-3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  #logo-starbucks {
+    background-position: left;
+  }
+
+  header {
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+
+  .header-custom {
+    padding: 0 1.5rem;
+  }
+
+  .barranav {
+    display: none;
+  }
+
+  .offcanvas.offcanvas-top {
+    top: 0 !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    width: 100% !important;
+    border-radius: 0;
+  }
+
+  .banner-contenedor {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-contenido {
+    order: 1;
+    position: static !important;
+    transform: none !important;
+    background-color: #f1f0eb;
+    color: #000;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .titulo-banner {
+    font-size: 2.5rem !important;
+  }
+
+  .banner-starbucks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-starbucks img {
+    order: 2;
+  }
+
+  .banner-favoritos .titulo-banner {
+    font-size: 2rem !important;
+  }
+
+  .banner-favoritos .descripcion-banner {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #logo-starbucks {
+    background-position: left;
+  }
+
+  header {
+    padding: 1rem 3rem;
+    gap: 3rem;
+  }
+
+  .header-custom {
+    padding: 0 2rem;
+  }
+
+  .barranav {
+    gap: 1.5rem;
+  }
+
+  .offcanvas.offcanvas-top {
+    top: 0 !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    width: 100% !important;
+    border-radius: 0;
+  }
+
+  #menu-desktop {
+    gap: 1.5rem;
+  }
+
+  .banner-contenedor {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-contenido {
+    order: 1;
+    position: static !important;
+    transform: none !important;
+    background-color: #f1f0eb;
+    color: #000;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .banner-starbucks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-starbucks img {
+    order: 2;
+  }
+
+  .botones-nav {
+    padding-left: 10rem;
+  }
+
+  .titulo-banner {
+    font-size: 2.9rem;
+  }
+
+  .historia-titulo {
+    font-size: 2rem;
+  }
+
+  .cafe-titulo {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  header {
+    padding: 1rem 4rem;
+    gap: 4rem;
+  }
+
+  .botones-nav {
+    padding-left: 15rem;
+  }
+
+  .titulo-banner {
+    font-size: 2.4rem;
+  }
+
+  .historia-titulo {
+    font-size: 3rem;
+  }
+
+  .cafe-titulo {
+    font-size: 2.6rem;
+  }
+
+  .product-nombre {
+    font-size: 1.8rem;
+  }
+
+  .titulo-detalle {
+    font-size: 2.8rem;
+  }
+
+  .subcategoria-detalle {
+    font-size: 2rem;
+  }
+
+  #logo-footer {
+    width: 20% !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  header {
+    padding: 1rem 5rem;
+    gap: 5rem;
+  }
+
+  .titulo-banner {
+    font-size: 2.9rem;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1680px) {
+  header {
+    padding: 1rem 6rem;
+    gap: 6rem;
+  }
+
+  .botones-nav {
+    padding-left: 20rem;
+  }
+
+  .historia-titulo {
+    font-size: 4rem;
+  }
+
+  .cafe-titulo {
+    font-size: 2.8rem;
+  }
+
+  .subcategoria-detalle {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1681px) {
+  header {
+    padding: 1rem 8rem;
+    gap: 8rem;
+  }
+
+  .botones-nav {
+    padding-left: 25rem;
+  }
+}
